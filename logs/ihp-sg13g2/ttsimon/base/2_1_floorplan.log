@@ -1,0 +1,80 @@
+OpenROAD v2.0-14511-gedb4e7e37 
+Features included (+) or not (-): +Charts +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lef/sg13g2_tech.lef, created 19 layers, 300 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lef/sg13g2_stdcell.lef, created 78 library cells
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There are 10 unconstrained endpoints.
+number instances in verilog is 1319
+Read in Floorplan DEF to initialize floorplan:  /work/designs/ihp-sg13g2/ttsimon/floorplan.def
+[INFO ODB-0127] Reading DEF file: /work/designs/ihp-sg13g2/ttsimon/floorplan.def
+[INFO ODB-0128] Design: tt_um_template
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0437] Pin directions are ignored from floorplan DEF files.
+[WARNING ODB-0249] skipping undefined net VGND encountered in FLOORPLAN DEF
+[WARNING ODB-0249] skipping undefined net VPWR encountered in FLOORPLAN DEF
+[INFO ODB-0252]     Updated 43 pins.
+[INFO ODB-0254]     Updated 43 nets and 0 connections.
+[INFO ODB-0134] Finished DEF file: /work/designs/ihp-sg13g2/ttsimon/floorplan.def
+[INFO RSZ-0026] Removed 109 buffers.
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1uA
+ power 1pW
+ distance 1um
+Report metrics stage 2, floorplan final...
+Warning: There are 10 unconstrained endpoints.
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 19617 u^2 58% utilization.
+Elapsed time: 0:00.77[h:]min:sec. CPU time: user 0.70 sys 0.04 (95%). Peak memory: 92772KB.

@@ -1,0 +1,406 @@
+
+==========================================================================
+cts pre-repair check_setup
+--------------------------------------------------------------------------
+0
+
+==========================================================================
+cts pre-repair report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+cts pre-repair report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+cts pre-repair report_worst_slack
+--------------------------------------------------------------------------
+worst slack 7.41
+
+==========================================================================
+cts pre-repair report_clock_skew
+--------------------------------------------------------------------------
+Clock core_clock
+   0.60 source latency simon1.seq[17][1]$_DFFE_PP_/CLK ^
+  -0.59 target latency simon1.seq_length[0]$_SDFFE_PN0P_/CLK ^
+   0.00 CRPR
+--------------
+   0.01 setup skew
+
+
+==========================================================================
+cts pre-repair report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: simon1.score1.active_digit$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: simon1.score1.active_digit$_SDFF_PP0_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.03    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  0.00    0.00    0.00 ^ clkbuf_0_clk/A (sg13g2_buf_1)
+    16    0.11    0.43    0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+                                         clknet_0_clk (net)
+                  0.43    0.00    0.34 ^ clkbuf_4_10_0_clk/A (sg13g2_buf_2)
+    16    0.05    0.12    0.26    0.60 ^ clkbuf_4_10_0_clk/X (sg13g2_buf_2)
+                                         clknet_4_10_0_clk (net)
+                  0.12    0.00    0.60 ^ simon1.score1.active_digit$_SDFF_PP0_/CLK (sg13g2_dfrbp_1)
+     1    0.00    0.04    0.20    0.80 v simon1.score1.active_digit$_SDFF_PP0_/Q_N (sg13g2_dfrbp_1)
+                                         _0016_ (net)
+                  0.04    0.00    0.80 v _2211_/A (sg13g2_inv_1)
+     1    0.00    0.02    0.03    0.83 ^ _2211_/Y (sg13g2_inv_1)
+                                         _0997_ (net)
+                  0.02    0.00    0.83 ^ _2214_/A (sg13g2_nor2_1)
+     1    0.00    0.02    0.03    0.86 v _2214_/Y (sg13g2_nor2_1)
+                                         _0081_ (net)
+                  0.02    0.00    0.86 v simon1.score1.active_digit$_SDFF_PP0_/D (sg13g2_dfrbp_1)
+                                  0.86   data arrival time
+
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.03    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  0.00    0.00    0.00 ^ clkbuf_0_clk/A (sg13g2_buf_1)
+    16    0.11    0.43    0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+                                         clknet_0_clk (net)
+                  0.43    0.00    0.34 ^ clkbuf_4_10_0_clk/A (sg13g2_buf_2)
+    16    0.05    0.12    0.26    0.60 ^ clkbuf_4_10_0_clk/X (sg13g2_buf_2)
+                                         clknet_4_10_0_clk (net)
+                  0.12    0.00    0.60 ^ simon1.score1.active_digit$_SDFF_PP0_/CLK (sg13g2_dfrbp_1)
+                          0.00    0.60   clock reconvergence pessimism
+                          0.00    0.60   library hold time
+                                  0.60   data required time
+-----------------------------------------------------------------------------
+                                  0.60   data required time
+                                 -0.86   data arrival time
+-----------------------------------------------------------------------------
+                                  0.25   slack (MET)
+
+
+
+==========================================================================
+cts pre-repair report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: uo_out[1]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: uo_out[1] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.03    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  0.00    0.00    0.00 ^ clkbuf_0_clk/A (sg13g2_buf_1)
+    16    0.11    0.43    0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+                                         clknet_0_clk (net)
+                  0.43    0.00    0.34 ^ clkbuf_4_14_0_clk/A (sg13g2_buf_2)
+    11    0.05    0.12    0.26    0.60 ^ clkbuf_4_14_0_clk/X (sg13g2_buf_2)
+                                         clknet_4_14_0_clk (net)
+                  0.12    0.00    0.60 ^ uo_out[1]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+     2    0.01    0.04    0.25    0.86 ^ uo_out[1]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+                                         net15 (net)
+                  0.04    0.00    0.86 ^ output15/A (sg13g2_buf_1)
+     1    0.00    0.01    0.05    0.91 ^ output15/X (sg13g2_buf_1)
+                                         uo_out[1] (net)
+                  0.01    0.00    0.91 ^ uo_out[1] (out)
+                                  0.91   data arrival time
+
+                         10.40   10.40   clock core_clock (rise edge)
+                          0.00   10.40   clock network delay (propagated)
+                          0.00   10.40   clock reconvergence pessimism
+                         -2.08    8.32   output external delay
+                                  8.32   data required time
+-----------------------------------------------------------------------------
+                                  8.32   data required time
+                                 -0.91   data arrival time
+-----------------------------------------------------------------------------
+                                  7.41   slack (MET)
+
+
+
+==========================================================================
+cts pre-repair report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: uo_out[1]$_SDFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: uo_out[1] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock source latency
+     1    0.03    0.00    0.00    0.00 ^ clk (in)
+                                         clk (net)
+                  0.00    0.00    0.00 ^ clkbuf_0_clk/A (sg13g2_buf_1)
+    16    0.11    0.43    0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+                                         clknet_0_clk (net)
+                  0.43    0.00    0.34 ^ clkbuf_4_14_0_clk/A (sg13g2_buf_2)
+    11    0.05    0.12    0.26    0.60 ^ clkbuf_4_14_0_clk/X (sg13g2_buf_2)
+                                         clknet_4_14_0_clk (net)
+                  0.12    0.00    0.60 ^ uo_out[1]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+     2    0.01    0.04    0.25    0.86 ^ uo_out[1]$_SDFFE_PN0P_/Q (sg13g2_dfrbp_1)
+                                         net15 (net)
+                  0.04    0.00    0.86 ^ output15/A (sg13g2_buf_1)
+     1    0.00    0.01    0.05    0.91 ^ output15/X (sg13g2_buf_1)
+                                         uo_out[1] (net)
+                  0.01    0.00    0.91 ^ uo_out[1] (out)
+                                  0.91   data arrival time
+
+                         10.40   10.40   clock core_clock (rise edge)
+                          0.00   10.40   clock network delay (propagated)
+                          0.00   10.40   clock reconvergence pessimism
+                         -2.08    8.32   output external delay
+                                  8.32   data required time
+-----------------------------------------------------------------------------
+                                  8.32   data required time
+                                 -0.91   data arrival time
+-----------------------------------------------------------------------------
+                                  7.41   slack (MET)
+
+
+
+==========================================================================
+cts pre-repair report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+clkbuf_4_11_0_clk/X                       8     17     -9 (VIOLATED)
+clkbuf_4_1_0_clk/X                        8     17     -9 (VIOLATED)
+clkbuf_0_clk/X                            8     16     -8 (VIOLATED)
+clkbuf_4_0_0_clk/X                        8     16     -8 (VIOLATED)
+clkbuf_4_10_0_clk/X                       8     16     -8 (VIOLATED)
+clkbuf_4_15_0_clk/X                       8     14     -6 (VIOLATED)
+clkbuf_4_2_0_clk/X                        8     14     -6 (VIOLATED)
+clkbuf_4_8_0_clk/X                        8     14     -6 (VIOLATED)
+clkbuf_4_3_0_clk/X                        8     13     -5 (VIOLATED)
+clkbuf_4_5_0_clk/X                        8     13     -5 (VIOLATED)
+clkbuf_4_14_0_clk/X                       8     11     -3 (VIOLATED)
+clkbuf_4_6_0_clk/X                        8     11     -3 (VIOLATED)
+clkbuf_4_13_0_clk/X                       8     10     -2 (VIOLATED)
+clkbuf_4_4_0_clk/X                        8     10     -2 (VIOLATED)
+clkbuf_4_12_0_clk/X                       8      9        (VIOLATED)
+clkbuf_4_7_0_clk/X                        8      9        (VIOLATED)
+clkbuf_4_9_0_clk/X                        8      9        (VIOLATED)
+
+
+==========================================================================
+cts pre-repair max_slew_check_slack
+--------------------------------------------------------------------------
+2.0730979442596436
+
+==========================================================================
+cts pre-repair max_slew_check_limit
+--------------------------------------------------------------------------
+2.5074000358581543
+
+==========================================================================
+cts pre-repair max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.8268
+
+==========================================================================
+cts pre-repair max_fanout_check_slack
+--------------------------------------------------------------------------
+-9.0
+
+==========================================================================
+cts pre-repair max_fanout_check_limit
+--------------------------------------------------------------------------
+8.0
+
+==========================================================================
+cts pre-repair max_fanout_check_slack_limit
+--------------------------------------------------------------------------
+-1.1250
+
+==========================================================================
+cts pre-repair max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.19351954758167267
+
+==========================================================================
+cts pre-repair max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.30000001192092896
+
+==========================================================================
+cts pre-repair max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.6451
+
+==========================================================================
+cts pre-repair max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+cts pre-repair max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 17
+
+==========================================================================
+cts pre-repair max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+cts pre-repair setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+cts pre-repair hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+cts pre-repair report_checks -path_delay max reg to reg
+--------------------------------------------------------------------------
+Startpoint: _2432_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: simon1.seq_counter[0]$_SDFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+   0.26    0.60 ^ clkbuf_4_3_0_clk/X (sg13g2_buf_2)
+   0.00    0.60 ^ _2432_/CLK (sg13g2_dfrbp_1)
+   0.25    0.85 ^ _2432_/Q (sg13g2_dfrbp_1)
+   0.11    0.96 ^ fanout68/X (sg13g2_buf_2)
+   0.12    1.09 ^ fanout67/X (sg13g2_buf_2)
+   0.17    1.25 v _1830_/X (sg13g2_mux2_1)
+   0.07    1.33 ^ _1832_/Y (sg13g2_o21ai_1)
+   0.08    1.41 ^ _1833_/X (sg13g2_or4_1)
+   0.28    1.70 v _1834_/Y (sg13g2_nand4_1)
+   0.18    1.87 v _1836_/X (sg13g2_xor2_1)
+   0.17    2.04 ^ _1948_/Y (sg13g2_nor3_1)
+   0.15    2.20 ^ fanout35/X (sg13g2_buf_2)
+   0.09    2.29 ^ _2363_/Y (sg13g2_nand2b_1)
+   0.18    2.47 v _2366_/Y (sg13g2_nand3_1)
+   0.16    2.63 ^ _2370_/Y (sg13g2_nor4_1)
+   0.10    2.73 ^ _2373_/Y (sg13g2_nand2b_1)
+   0.00    2.73 ^ simon1.seq_counter[0]$_SDFFE_PN0P_/D (sg13g2_dfrbp_1)
+           2.73   data arrival time
+
+  10.40   10.40   clock core_clock (rise edge)
+   0.00   10.40   clock source latency
+   0.00   10.40 ^ clk (in)
+   0.34   10.74 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+   0.26   10.99 ^ clkbuf_4_12_0_clk/X (sg13g2_buf_2)
+   0.00   10.99 ^ simon1.seq_counter[0]$_SDFFE_PN0P_/CLK (sg13g2_dfrbp_1)
+   0.00   10.99   clock reconvergence pessimism
+  -0.12   10.88   library setup time
+          10.88   data required time
+---------------------------------------------------------
+          10.88   data required time
+          -2.73   data arrival time
+---------------------------------------------------------
+           8.15   slack (MET)
+
+
+
+==========================================================================
+cts pre-repair report_checks -path_delay min reg to reg
+--------------------------------------------------------------------------
+Startpoint: simon1.score1.active_digit$_SDFF_PP0_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: simon1.score1.active_digit$_SDFF_PP0_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+   0.26    0.60 ^ clkbuf_4_10_0_clk/X (sg13g2_buf_2)
+   0.00    0.60 ^ simon1.score1.active_digit$_SDFF_PP0_/CLK (sg13g2_dfrbp_1)
+   0.20    0.80 v simon1.score1.active_digit$_SDFF_PP0_/Q_N (sg13g2_dfrbp_1)
+   0.03    0.83 ^ _2211_/Y (sg13g2_inv_1)
+   0.03    0.86 v _2214_/Y (sg13g2_nor2_1)
+   0.00    0.86 v simon1.score1.active_digit$_SDFF_PP0_/D (sg13g2_dfrbp_1)
+           0.86   data arrival time
+
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.34    0.34 ^ clkbuf_0_clk/X (sg13g2_buf_1)
+   0.26    0.60 ^ clkbuf_4_10_0_clk/X (sg13g2_buf_2)
+   0.00    0.60 ^ simon1.score1.active_digit$_SDFF_PP0_/CLK (sg13g2_dfrbp_1)
+   0.00    0.60   clock reconvergence pessimism
+   0.00    0.60   library hold time
+           0.60   data required time
+---------------------------------------------------------
+           0.60   data required time
+          -0.86   data arrival time
+---------------------------------------------------------
+           0.25   slack (MET)
+
+
+
+==========================================================================
+cts pre-repair critical path target clock latency max path
+--------------------------------------------------------------------------
+0.5973
+
+==========================================================================
+cts pre-repair critical path target clock latency min path
+--------------------------------------------------------------------------
+0.5987
+
+==========================================================================
+cts pre-repair critical path source clock latency min path
+--------------------------------------------------------------------------
+0.0000
+
+==========================================================================
+cts pre-repair critical path delay
+--------------------------------------------------------------------------
+0.9112
+
+==========================================================================
+cts pre-repair critical path slack
+--------------------------------------------------------------------------
+7.4088
+
+==========================================================================
+cts pre-repair slack div critical path delay
+--------------------------------------------------------------------------
+813.081651
+
+==========================================================================
+cts pre-repair report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             1.14e-03   3.97e-05   8.84e-08   1.18e-03  64.8%
+Combinational          2.43e-04   1.87e-04   1.53e-07   4.30e-04  23.7%
+Clock                  7.85e-05   1.29e-04   1.04e-08   2.08e-04  11.5%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.46e-03   3.56e-04   2.52e-07   1.81e-03 100.0%
+                          80.4%      19.6%       0.0%
