@@ -55,6 +55,7 @@ jobs:
         with:
           name: gds
           path: |
-            results
-            reports
             logs
+            objects
+            reports
+            results
