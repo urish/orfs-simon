@@ -38,9 +38,10 @@ jobs:
       - name: checkout ORFS
         uses: actions/checkout@v4
         with:
-          repository: The-OpenROAD-Project/OpenROAD-flow-scripts
+          repository: KrzysztofHerman/OpenROAD-flow-scripts
           submodules: recursive
           path: 'orfs'
+          ref: 'ihp-dev'
 
       - name: Run the flow
         working-directory: 'orfs/flow'
